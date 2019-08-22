@@ -1,7 +1,7 @@
 let lineNumber = prompt("Entre un nombre de ligne");
 let pyramideLine="";
 let hash = "#";
-let space = "  ";
+let space = " ";
 let a = 0
 
 for (var i = lineNumber; i > 0; i--) {
