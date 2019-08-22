@@ -21,7 +21,7 @@ const entrepreneurs = [
 
 
 
-
+console.log("Les entrepreneurs nés dans les années 70 :")
 function findYear() {
   for (var i = 0; i < entrepreneurs.length; i++) {
     if (entrepreneurs[i].year >= 1970 && entrepreneurs[i].year < 1980) {
@@ -31,8 +31,8 @@ function findYear() {
 }
 findYear();
 
+console.log("Le nom et prénom des entrepreneurs :")
 let name = [];
-
 function findName() {
   for (var i = 0; i < entrepreneurs.length; i++) {
     name.push(entrepreneurs[i].first + " "+ entrepreneurs[i].last);
@@ -41,6 +41,7 @@ function findName() {
 }
 findName();
 
+console.log("L'âge des entrepreneurs :")
 function findAge() {
   for (var i = 0; i < entrepreneurs.length; i++) {
     console.log(`${entrepreneurs[i].first}  ${entrepreneurs[i].last}  ${2019 - entrepreneurs[i].year}`);
@@ -48,12 +49,14 @@ function findAge() {
 }
 findAge();
 
-let name = [];
+
+console.log("Les entrepreneurs par ordre alphabétique :")
+let name2 = [];
 function sortLast() {
     for (var i = 0; i < entrepreneurs.length; i++) {
-    name.push(entrepreneurs[i].last + " " +  entrepreneurs[i].first + " " + entrepreneurs[i].year);
-    name.sort();
+    name2.push(entrepreneurs[i].last + " " +  entrepreneurs[i].first + " " + entrepreneurs[i].year);
+    name2.sort();
   };
-  console.log(name)
+  console.log(name2)
 }
 sortLast();
