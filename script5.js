@@ -13,39 +13,46 @@ const books = [
   { title: 'Guerre et Paix', id: 748147, rented: 19 }
 ];
 
-let name = [];
+let surname = [];
 let rented = [];
 
+console.log("Est-ce qu'il y a des livres non empruntés ?")
 function rent() {
-books.forEach(livre => {
-  if (livre.rented != 0){
-    rented.push(livre)
-  }
-});
-if (rented.length = books.length){
-  console.log("Tous les livres ont été empruntés.")
-}
-else {
-  console.log(rented.length + " livres ont été empruntés sur un total de " + books.length + " livres.")
-}
+	books.forEach(livre => {
+  		if (livre.rented != 0){
+	    		rented.push(livre)
+  		}
+	});
+   if (rented.length = books.length){
+   console.log("> Tous les livres ont été empruntés.")
+   }
+   else {
+   console.log(rented.length + " livres ont été empruntés sur un total de " + books.length + " livres.")
+   }
 }
 rent();
 
+
+
+console.log("Quel est le livre le plus et le moins emprunté ?")
 function sortRented() {
     for (var i = 0; i < books.length; i++) {
-    	name.push(books[i].rented + " " +  books[i].title + " " + books[i].id);
-    	name.sort();  	
-  };
-  console.log(name[name.length - 1])
+    	surname.push(books[i].rented + " " +  books[i].title + " " + books[i].id);
+    	surname.sort();  	
+    };
+console.log(`Le livre le plus emprunté est ${surname[surname.length - 1]}`)
 }
 sortRented();
 
+
 function sortLessRented() {
-   
-  console.log(name[0])
-}
+  console.log(`Le livre le moins emprunté est ${surname[0]}`)
+  }
 sortLessRented();
 
+
+
+console.log("Quel livre a pour id 873495 ?")
 function findId() {
 	let find = [];
 	books.forEach(livre => {
@@ -57,6 +64,9 @@ function findId() {
 }
 findId();
 
+
+
+console.log("Quel livre a pour id 133712 ?")
 function findOtherId() {
 	let find = [];
 	books.forEach(livre => {
@@ -69,7 +79,7 @@ function findOtherId() {
 findOtherId();
 
 
-
+console.log("Fin du projet")
 
 
 
